@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="style2.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fauna+One&family=Pacifico&family=Playfair+Display&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            --pinkish-grey: #EEE2DC;
+            --light-gray: #BAB2B5;
+            --pastel-pink: #EDC7B7;
+            --blue: #123c69;
+        }
+
+        body {
+            background-color: #eee2dc;
+        }
+
+        .navbar {
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            /* background-color: #edc7b7; */
+            background-color: rgba(238, 226, 220, 0.2)
+        }
+
+        .serenity_logo img {
+            margin-top: 0;
+            left: 0;
+            width: 70px;
+            height: 80px;
+        }
+
+        .navbar .nav_links a {
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: normal;
+            color: #ac3b61;
+            margin-right: 20px;
+            font-family: 'Times New Roman';
+        }
+
+        .navbar .nav_links a:hover,
+        a:active {
+            border-bottom: 3px solid #123c69;
+        }
+
+        button.sign_out {
+            border: none;
+            padding: 12px;
+            border-radius: 45px;
+            color: white;
+            background: blue;
+            cursor: pointer;
+        }
+
+        button.sign_out a {
+            color: white !important;
+            font-size: 16px !important;
+            padding-left: 15px;
+            pointer-events: none;
+            font-family: Arial;
+        }
+
+        main {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        main .videos {
+
+            text-align: center;
+
+        }
+
+        div.container.my-3.pt-1{
+          margin-left: -35px;
+        }
+
+        .videos h3 {
+            font-size: 2.5rem;
+            font-family: 'Fauna One', serif;
+            font-weight: bold;
+            color: #123c69;
+            text-align: center;
+        }
+
+        h4 {
+            font-size: 1 rem;
+            font-family: 'Fauna One', serif;
+            font-weight: bold;
+            color: #123c69;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin-right: 30px;
+            margin-left: 30px;
+
+        }
+
+        .vidtopic {
+            color: #123c69;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+        }
+
+        p {
+            text-align: center;
+            margin: 25px;
+            font-size: 1.3em;
+            font-weight: 700;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-bottom-color: #ac3b61;
+        }
+
+        .music-container {
+            background-color: #123c69;
+            border-radius: 15px;
+            box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+            display: flex;
+            padding: 20px 30px;
+            position: relative;
+            margin: 100px 0;
+            z-index: 10;
+        }
+
+        .img-container {
+            position: relative;
+            width: 110px;
+        }
+
+        .img-container::after {
+            content: '';
+            background-color: transparent;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            transform: translate(-50%, 50%);
+        }
+
+        .img-container img {
+            border-radius: 50%;
+            object-fit: cover;
+            height: 110px;
+            width: inherit;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: rotate 3s linear infinite;
+
+            animation-play-state: paused;
+        }
+
+        .music-container.play .img-container img {
+            animation-play-state: running;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .action-btn {
+            background-color: #123c69;
+            border: 0;
+            color: #ac3b61;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px;
+            margin: 0 20px;
+        }
+
+        .action-btn.action-btn-big {
+            color: #cdc2d0;
+            font-size: 30px;
+        }
+
+        .action-btn:focus {
+            outline: 0;
+        }
+
+        .music-info {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 15px 15px 0 0;
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: calc(100% - 40px);
+            padding: 10px 10px 10px 150px;
+            opacity: 0;
+            transform: translateY(0%);
+            transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+            z-index: 0;
+        }
+
+        .music-container.play .music-info {
+            opacity: 1;
+            transform: translateY(-100%);
+        }
+
+        .music-info h4 {
+            margin: 0;
+        }
+
+        .progress-container {
+            background: #fff;
+
+            cursor: pointer;
+            margin: 10px 0;
+            height: 4px;
+            width: 100%;
+        }
+
+        .progress {
+            background-color: #ac3b61;
+            border-radius: 5px;
+            height: 100%;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home_main">
+        <div class="wrap">
+            <div class="navbar">
+                <div class="serenity_logo">
+                    <img src="./images/logo.png" alt="logo" class="logo">
+                    <!-- <h4>SERENITY</h4> -->
+                </div>
+                <div class="nav_links">
+                    <a href="index.html">Home</a>
+                    <a href="affirmations.html">Affirmations</a>
+                    <a href="mydiary.html">My Diary</a>
+                    <button class="sign_out"><a href="login.html">Sign Out</a></button>
+                </div>
+            </div>
+        </div>
+        <main>
+            <section class="videos">
+
+                <h3>Videos On Mental Health</h3>
+                <div class="container my-3 pt-1">
+                    <br>
+                    <div class="vid1">
+                        <p class="vidtopic">
+                            <iframe class="responsive" width="420" height="315"
+                                src="https://www.youtube.com/embed/oWjSdwzOA6k" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <br>
+                            8 principles to achieve optimum mental health | Dan Banos | TEDxRockhampto
+                        </p>
+                    </div>
+                    <div class="vid2">
+                        <p class="vidtopic">
+                            <iframe class="responsive" width="400" height="315"
+                                src="https://www.youtube.com/embed/sP-JR0MAQ5c" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <br>
+                            Mental Health Tips during Covid 19 for 2021 (and beyond)
+                        </p>
+                    </div>
+                    <div class="vid3">
+                        <p class="vidtopic">
+                            <iframe class="responsive" width="420" height="315"
+                                src="https://www.youtube.com/embed/gy1iH_Gxn0Q" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                            <br>
+                            Stop the Stigma: Why it's important to talk about Mental Health | Heather Sarkis | TEDxGainesville
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <h4>It's not about being good at something, it's about being good to yourself. Calm your body and mind with relaxing guided meditation or listen to some relaxing music and chill.</h4>
+                <div class="music-container" id="music-container">
+                    <div class="music-info">
+                        <h4 id="title"></h4>
+                        <div class="progress-container" id="progress-container">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                    </div>
+                    <audio src="daedarus\music\meditate.mp3" id="audio"></audio>
+                    <div class="img-container">
+                        <img src="./images/meditate.jpg" alt="music-pic" id="cover" />
+                    </div>
+                    <div class="navigation">
+                        <button id="prev" class="action-btn">
+                            <i class="fas fa-backward"></i>
+                        </button>
+                        <button id="play" class="action-btn action-btn-big">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button id="next" class="action-btn">
+                            <i class="fas fa-forward"></i>
+                        </button>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="player.js"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

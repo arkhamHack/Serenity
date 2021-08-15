@@ -1,0 +1,148 @@
+*{
+  margin: 0;
+  padding:0;
+  --pinkish-grey : #EEE2DC;
+  --light-gray: #BAB2B5;
+  --pastel-pink: #EDC7B7;
+  --blue: #123c69;
+}
+
+body{
+  background-color: #EEE2DC;
+  /* background-image: url('./images/1.png'); */
+}
+
+.navbar{
+  top:0;
+  left:0;
+  right:0;
+  z-index: 100;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  background-color: rgba(238, 226, 220, 1); 
+  /* box-shadow: 0 13px 28px rgba(0,0,0,6); */
+}
+
+/* .serenity_logo{
+  font-family: 'Pacifico', cursive;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--blue); */
+  /* font-size: 1.4rem; */
+/* } */
+
+.serenity_logo img{
+  margin-top:0;
+  left: 0;
+  width: 70px;
+  height: 80px;
+}
+
+.navbar .nav_links a{
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: var(--blue);
+  margin-right: 20px;
+}
+
+.navbar .nav_links a:hover , a:active{
+   border-bottom: 3px solid var(--light-gray);
+}
+
+button.sign_out {
+  border: none;
+  padding: 15px 25px;
+  border-radius: 45px;
+  color: white;
+  background: blue;
+  cursor: pointer;
+}
+
+button.sign_out a{
+  color: white !important;
+  font-size: 14px !important;
+  padding-left: 15px;
+  pointer-events: none;
+}
+
+main{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+}
+
+main .left-sec{
+ padding-left: 100px;
+ text-align: center;
+}
+
+main .right-sec{
+  margin-left: 20px; 
+}
+main .right-sec img{
+  /* margin-top: 20px; */
+  width: 930px;
+  height: 680px;
+}
+.left-sec h1{
+   font-size: 5.5rem;
+   font-family: 'Fauna One',serif;
+   font-weight: bold;
+   color: var(--blue);
+}
+
+.left-sec h3{
+  font-size: 2.7rem;
+  font-family: 'Pacifico' , sans-serif;
+  font-style: italic;
+  color: var(--light-gray) ;
+  font-weight: lighter;
+}
+
+.left-sec h2{
+  margin-top: 12px;
+  font-size: 2rem;
+  font-family: 'Ubuntu' , sans-serif;
+  letter-spacing: 1px;
+}
+  
+.gs_btn{
+  margin: 20px auto ;
+  padding: 15px 55px;
+  background: rgba(245, 176, 171,0.4);
+  border: 5px solid rgb(245, 176, 171);
+  color: #123c69;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  font-family:'Playfair Display' , serif;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.gs_btn:hover{
+  color: white;
+  background: rgb(248, 179, 174);
+}
+
+#main-info{
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#main-info img{
+  width : 700px;
+}
+
+#main-info .info-text{
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Diary</title>
+  <link rel="stylesheet" href="mydiary.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fauna+One&family=Pacifico&family=Playfair+Display&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="home_main">
+     <div class="wrap">
+       <div class="navbar">
+         <div class="serenity_logo">
+           <img src="./images/logo.png" alt="logo" class="logo">
+           <!-- <h4>SERENITY</h4> -->
+         </div>     
+         <div class="nav_links">
+           <a href="index.html">Home</a>
+           <a href="resources.html">Resources</a>
+           <a href="affirmations.html">Affirmations</a>
+           <a href="login.html"><button class="sign_out">Sign Out</button></a>
+         </div>
+       </div>
+     </div>   
+    </div> 
+    <div class ="info-part"> 
+      <div class ="info-txt">
+      <h3>An audio diary for you to declutter your mind.</h3>
+      <p>Journaling improves your mental health, reduces burnout, and helps you relax. Sometimes when  emotions of doubts, worries, excitement, joy rise to the top, we look for different ways to release those emotions. This diary helps you to vent out those emotions by giving a transcript of whatever you are expressing through your speech.<br> Now ,you dont need to look for a perfect place to sit and write your journal.<br> <span>Give it a try! 🌸</span>
+      </p> 
+      </div>
+      <div class="info-img">
+      <img src = "./images/feeling.png"/>
+      </div>
+    </div>
+    <header>
+      <div class= "main_div">
+        <a href="" class="main"><img src="./images/home.svg" alt = "home"></a>
+      </div>
+      <div class = "languages">
+        <button class="usa-flag"><img src="./images/usa.svg" alt="usa"></button>
+        <small class="actual-lang"></small>
+        <button class="india-flag"><img src="./images/india.svg" alt="in"></button>
+      </div>    
+    </header>
+    <div class="main_content">
+        <div class="head">
+              <!-- <img src="./images/diary.svg" class="diary_img" alt="diary_img"> -->
+              <h2 class="diary_head">My Diary</h2> 
+        </div>
+        <button class="mic"><img src= "./images/mic.svg" alt = "mic"></button> 
+
+        <div class="msg"></div>
+  
+        <form autocomplete="off">
+              <textarea name = "text" id ="text" rows ="18"></textarea>
+              <button class="submit_btn"><img src="./images/submit.svg" alt = "submit"></button>
+        </form>  
+      
+        <div class="diary-body">
+          <div class="diary-page">
+            <div>I feel awesome.</div>
+              <button class="del-btn" onclick="window.location.reload()"><img src="./images/del.svg" alt = "del-btn"></button>
+              <small>14/08/2021 10:35</small>
+          </div>
+        </div>
+    </div> 
+  <script src="mydiary.js"></script>
+</body>
+</html>

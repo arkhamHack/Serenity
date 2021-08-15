@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Affirmation Generator</title>
+  <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fauna+One&family=Pacifico&family=Playfair+Display&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="affirmations.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c1d528c394.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div class="home_main">
+     <div class="wrap">
+       <div class="navbar">
+         <div class="serenity_logo">
+           <img src="./images/logo.png" alt="logo" class="logo">
+           <!-- <h4>SERENITY</h4> -->
+         </div>
+         <div class="nav_links">
+           <a href="index.html">Home</a>
+           <a href="resources.html">Resources</a>
+           <a href= "mydiary.html">My Diary</a>
+           <a href="login.html"><button class="sign_out">Sign Out</button></a>
+         </div>
+       </div>
+     </div> 
+    </div> 
+    <div class="info">
+      <h3>Connect with yourselves 🕊</h3>
+      <p>The true nature of mind is to think. It is ok to spiral sometimes.</p>
+      <p>Shift your focus by affirming positive affirmations.</p>
+    </div>
+    <div class="affirm_container">
+     <div class ="container">
+       <h2 class="generate-text">Affirm!!!</h2>
+       <button type = "button" id="affirm-btn">Positive Affirmations</button>
+       <p id = "affirmation" class="blockquote"></p>
+     </div>
+    </div> 
+    <div class="mic-head">
+      <p>Record affirmations in your own voice.
+    </div>
+
+    <!-- trial recorder -->
+    <div class="recorder">
+        <button id="start">START RECORDING</button>                  
+        <button id="stop">STOP RECORDING</button>
+    </div>
+    <div class= "audio-btns">
+      <!-- for recording -->
+      <audio controls></audio>
+      <!-- for playing -->
+      <audio id="audioPlay" controls></audio>
+    </div>
+    <script src="affirmations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

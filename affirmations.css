@@ -1,0 +1,189 @@
+*{
+  margin: 0;
+  padding:0;
+  --pinkish-grey : #EEE2DC;
+  --light-gray: #BAB2B5;
+  --pastel-pink: #EDC7B7;
+  --blue: #123c69;
+}
+
+body{
+  background-color: var(--pinkish-grey);
+}
+
+.navbar{
+  top:0;
+  left:0;
+  right:0;
+  z-index: 100;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  background-color: rgb(240, 221, 214) ;
+}
+/* 
+.serenity_logo{
+  font-family: 'Pacifico', cursive;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--blue);
+  font-size: 1.4rem;
+} */
+
+.serenity_logo img{
+  margin-top:0;
+  left: 0;
+  width: 70px;
+  height:80px;
+}
+
+.navbar .nav_links a{
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: var(--blue);
+  margin-right: 20px;
+}
+
+.navbar .nav_links a:hover , a:active{
+   border-bottom: 3px solid gray;
+}
+
+button.sign_out {
+  border: none;
+  padding: 15px 25px;
+  border-radius: 45px;
+  color: white;
+  background: blue;
+  cursor: pointer;
+}
+
+button.sign_out a{
+  color: white !important;
+  font-size: 14px !important;
+  padding-left: 15px;
+  pointer-events: none !important;
+}
+
+.info{
+  margin: 140px auto 0px auto;
+  background: palevioletred;
+  width: 50%;
+  text-align: center;
+  padding: 50px;
+  font-family: 'Ubuntu' , serif;
+  border-radius: 25px;
+}
+
+.info h3{
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+.info p{
+  font-size: 1.2rem;
+  color: white;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.affirm_container {
+   min-height: 100vh;
+    width: 650px;
+    text-align: center;
+    margin: -200px auto 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.container {
+  box-shadow:  0px 2px 18px -5px rgba(0,0,0,1);
+  padding: 20px;
+  background-color: var(--pastel-pink);
+  border-radius: 25px;
+  background-image: radial-gradient(circle, #fff 2%, transparent 5%), radial-gradient(circle, #fff 5%, transparent 5%);
+  background-size: 50px 100px;
+  background-position: 0 0, 25px 50px;
+}
+
+.container h2{
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+  margin-top: 30px;
+}
+
+.container small{
+  font-weight: normal;
+  padding: 0.3rem 1rem;
+  color: palevioletred;
+}
+
+ .blockquote{
+  padding: 1.5rem 0;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.6rem;
+  font-family: 'Ubuntu';
+}
+
+#affirm-btn{
+  font-size: 1rem;
+  border: none;
+  background-color: var(--pinkish-grey);
+  padding: 15px;
+  color: var(--blue);
+  border-radius: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+#affirm-btn:hover {
+  scale: 0.5;
+  background: var(--blue);
+  color: white;
+  box-shadow: 0 5px 15px rgba(145, 92, 182, .8);
+}
+.mic-head{
+  margin: -180px auto 0 auto;
+  text-align: center;
+  background: purple;
+  color: white;
+  width: 50%;
+  font-size: 1.8rem;
+}
+.recorder {
+  margin: 25px auto;
+  text-align: center;
+  width: 70%;
+}
+#start , #stop {
+  outline: none;
+  background: none;
+  background-color: lightgray; 
+  padding: 20px 45px;
+  border: 3px solid #123c69;
+  font-size: 0.9rem;
+  font-family: 'Flora One', serif;
+  letter-spacing: 1px;
+}
+
+#start:hover, #stop:hover {
+  background: #658fbb;
+  color: white;
+}
+
+.audio-btns{
+  margin: 25px auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 680px){
+  .container{
+    width: 600px;
+  }
+}
